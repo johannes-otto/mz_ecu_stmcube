@@ -76,7 +76,7 @@ _UserDraw (WM_HWIN hWin, int Stage)
       GUI_SetFont (GUI_FONT_20B_1);
       GUI_SetColor (GUI_WHITE);
       GUI_DispStringHCenterAt ("Zündpunkt in ° vor OT.", 160, 0);
-      GUI_DispFloat (get_b_1k (), 4);
+      //GUI_DispFloat (get_b_1k (), 4);
     }
 }
 GRAPH_SCALE_Handle _hScaleV;

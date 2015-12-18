@@ -82,7 +82,7 @@ Purpose     : Display controller initialization
 // Define the available number of bytes available for the GUI
 //
 #if USE_SDRAM_AS_GUIMEM==1
-  #define GUI_NUMBYTES  (1024 * 128 * 4)   // UB : minimum (1024*128*4) to rotate the screen
+  #define GUI_NUMBYTES  (1024 * 1024)   // UB : minimum (1024*128*4) to rotate the screen
 #else
   #define GUI_NUMBYTES  (1024 * 100 )
 #endif

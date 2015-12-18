@@ -52,8 +52,8 @@ void EXTILine2_Config(void) {
 	;
 
 	/* Configure PA0 pin as input floating */
-	GPIO_InitStructure.Mode = GPIO_MODE_IT_RISING_FALLING;
-	GPIO_InitStructure.Pull = GPIO_NOPULL;
+	GPIO_InitStructure.Mode = GPIO_MODE_IT_FALLING;
+	GPIO_InitStructure.Pull = GPIO_PULLUP;
 	GPIO_InitStructure.Pin = GPIO_PIN_2;
 	HAL_GPIO_Init(GPIOE, &GPIO_InitStructure);
 

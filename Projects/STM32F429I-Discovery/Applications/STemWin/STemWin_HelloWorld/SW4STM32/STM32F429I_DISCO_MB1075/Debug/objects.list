@@ -43,6 +43,7 @@
 "Application/User/main.o"
 "Application/User/simple_graph.o"
 "Application/User/start_screen.o"
+"Application/User/start_screen_high.o"
 "Application/User/stm32f4xx_it.o"
 "Application/User/stopwatch.o"
 "Application/SW4STM32/startup_stm32f429xx.o"

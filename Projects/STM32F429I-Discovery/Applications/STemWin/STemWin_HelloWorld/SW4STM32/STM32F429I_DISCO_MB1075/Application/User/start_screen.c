@@ -2603,6 +2603,7 @@ WM_HWIN CreateWindow_start_screen(void) {
   WM_HWIN hWin;
 
   hWin = GUI_CreateDialogBox(_aDialogCreate, GUI_COUNTOF(_aDialogCreate), _cbDialog, WM_HBKWIN, 0, 0);
+
   return hWin;
 }
 

@@ -194,7 +194,7 @@ GUI_POINT* _InitPoints(float x_tick, float y_tick, float y_offset) {
 int get_min_bk(void) {
 	int i;
 	float a[] = { b_1k, b_2k, b_2k, b_3k, b_4k, b_5k, b_6k, b_7k, b_8k, b_9k };
-	int num = 9;
+	int num = 10;
 	float smallest = a[0];
 
 	for (i = 0; i < num; i++) {
@@ -208,7 +208,7 @@ int get_min_bk(void) {
 int get_max_bk(void) {
 	int i;
 	float a[] = { b_1k, b_2k, b_2k, b_3k, b_4k, b_5k, b_6k, b_7k, b_8k, b_9k };
-	int num = 9;
+	int num = 10;
 	float biggest = a[0];
 
 	for (i = 0; i < num; i++) {

@@ -71,7 +71,11 @@ int main(void) {
 
 	//GUI_SetOrientation(GUI_SWAP_XY | GUI_MIRROR_Y);
 	hWin_start_screen = CreateWindow_start_screen();
+	//GUI_MEMDEV_FadeInWindow(hWin_start_screen,100);
+
 	GUI_Delay(2000);
+	//GUI_MEMDEV_FadeOutWindow(hWin_start_screen,500);
+	//GUI_Delay(4000);
 	WM_DeleteWindow(hWin_start_screen);
 
 	BackgroudTimerInit();
@@ -140,7 +144,6 @@ void compute_angles() {
 void ConfigMenu(void) {
 	WM_DeleteWindow(hWin_graph);
 	hWin_config = CreateWindow_config();
-	//HAL_NVIC_EnableIRQ(EXTI0_IRQn);
 
 }
 

@@ -234,7 +234,7 @@ void _cbDialog_config_low(WM_MESSAGE * pMsg) {
 				break;
 			case WM_NOTIFICATION_VALUE_CHANGED:
 				hItem = WM_GetDialogItem(pMsg->hWin, ID_SPINBOX_2);
-				set_b_2k(SPINBOX_GetValue(hItem));
+				set_b_3k(SPINBOX_GetValue(hItem));
 				// USER START (Optionally insert code for reacting on notification message)
 				// USER END
 				break;

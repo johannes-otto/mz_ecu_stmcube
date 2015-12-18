@@ -174,7 +174,9 @@ SECTIONS
     . = ALIGN(4);
   } >RAM
   
-	.HeapMemSection : 
+  
+  
+	.HeapMemSection(NOLOAD) : 
     {
         *(.HeapMemSection)
     } > sdram
