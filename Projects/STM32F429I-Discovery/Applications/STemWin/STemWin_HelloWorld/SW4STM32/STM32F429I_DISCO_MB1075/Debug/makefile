@@ -53,7 +53,7 @@ all: STM32F429I_DISCO_MB1075.elf
 STM32F429I_DISCO_MB1075.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU G++ Linker'
-	arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L/home/johannes/workspace/STM32Cube_FW_F4_V1.10.0/Middlewares/ST/STemWin/Lib -specs=nosys.specs -T"../STM32F429ZITx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -fno-exceptions -fno-rtti -lm -o "STM32F429I_DISCO_MB1075.elf" @"objects.list" $(USER_OBJS) $(LIBS)
+	arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L/home/johannes/workspace/mz_ecu_stmcube/Middlewares/ST/STemWin/Lib -specs=nosys.specs -T"../STM32F429ZITx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -fno-exceptions -fno-rtti -lm -o "STM32F429I_DISCO_MB1075.elf" @"objects.list" $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build

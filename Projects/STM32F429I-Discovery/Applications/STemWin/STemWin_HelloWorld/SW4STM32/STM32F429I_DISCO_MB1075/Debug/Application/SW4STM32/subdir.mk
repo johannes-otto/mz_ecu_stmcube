@@ -4,14 +4,14 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 S_SRCS += \
-/home/johannes/workspace/STM32Cube_FW_F4_V1.10.0/Projects/STM32F429I-Discovery/Applications/STemWin/STemWin_HelloWorld/SW4STM32/startup_stm32f429xx.s 
+/home/johannes/workspace/mz_ecu_stmcube/Projects/STM32F429I-Discovery/Applications/STemWin/STemWin_HelloWorld/SW4STM32/startup_stm32f429xx.s 
 
 OBJS += \
 ./Application/SW4STM32/startup_stm32f429xx.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-Application/SW4STM32/startup_stm32f429xx.o: /home/johannes/workspace/STM32Cube_FW_F4_V1.10.0/Projects/STM32F429I-Discovery/Applications/STemWin/STemWin_HelloWorld/SW4STM32/startup_stm32f429xx.s
+Application/SW4STM32/startup_stm32f429xx.o: /home/johannes/workspace/mz_ecu_stmcube/Projects/STM32F429I-Discovery/Applications/STemWin/STemWin_HelloWorld/SW4STM32/startup_stm32f429xx.s
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU GCC Assembler'
 	@echo $(PWD)
