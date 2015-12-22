@@ -5,7 +5,7 @@ uint32_t uwPrescalerValue = 0;
 void BackgroudTimerInit() {
 	uwPrescalerValue = (uint32_t) ((SystemCoreClock / 2) / 100000) - 1;
 	TimHandle.Instance = TIM3;
-	TimHandle.Init.Period = 500 - 1;
+	TimHandle.Init.Period = 5000 - 1;
 	TimHandle.Init.Prescaler = uwPrescalerValue;
 	TimHandle.Init.ClockDivision = 0;
 	TimHandle.Init.CounterMode = TIM_COUNTERMODE_UP;

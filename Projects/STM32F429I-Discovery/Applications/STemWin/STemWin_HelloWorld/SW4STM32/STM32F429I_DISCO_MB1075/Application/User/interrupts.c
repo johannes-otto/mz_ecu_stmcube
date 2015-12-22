@@ -18,7 +18,6 @@ void BSP_Config(void) {
 }
 
 void BSP_Background(void) {
-	BSP_LED_Toggle(LED4);
 	BSP_Pointer_Update();
 }
 
@@ -28,7 +27,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
 		HAL_NVIC_DisableIRQ(EXTI0_IRQn);
 		HAL_NVIC_DisableIRQ(EXTI2_IRQn);
 		BSP_LED_On(LED3);
-		BSP_LED_On(LED4);
+		HAL_TIM_Base_Start_IT(&TimHandle);
 		ConfigMenu();
 	} else if (GPIO_Pin == GPIO_PIN_2) {
 		ignite();
