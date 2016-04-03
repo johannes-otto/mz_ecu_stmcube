@@ -62,6 +62,21 @@ void EXTILine2_Config(void) {
 	HAL_NVIC_EnableIRQ(EXTI2_IRQn);
 }
 
+void Ignition_Pin_Init(void) {
+	GPIO_InitTypeDef GPIO_InitStructure;
+
+	/* Enable GPIOA clock */
+	__HAL_RCC_GPIOB_CLK_ENABLE();
+
+	/* Configure PA0 pin as input floating */
+	GPIO_InitStructure.Mode = GPIO_MODE_OUTPUT_PP;
+	GPIO_InitStructure.Pin = GPIO_PIN_2;
+	HAL_GPIO_Init(GPIOB, &GPIO_InitStructure);
+
+	/* Enable and set EXTI Line0 Interrupt to the lowest priority */
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_RESET);
+}
+
 void SystemClock_Config(void) {
 	RCC_ClkInitTypeDef RCC_ClkInitStruct;
 	RCC_OscInitTypeDef RCC_OscInitStruct;

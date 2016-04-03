@@ -55,6 +55,7 @@ void disp_all_values(void);
 
 extern void EXTILine0_Config(void);
 extern void EXTILine2_Config(void);
+extern void Ignition_Pin_Init(void);
 
 //extern WM_HWIN CreateWindow_graph(void);
 extern WM_HWIN CreateWindow_graph(void);

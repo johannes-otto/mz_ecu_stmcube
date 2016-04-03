@@ -67,27 +67,28 @@ int main(void) {
 
 
 	 h_mm = 58;
-	set_offset_mm(6.0 * 10);
+	set_offset_mm(8.3 * 10);
 	set_def_ign_mm(3.0 * 10);
 	set_ign_length(2000 / 100);
 
-	set_b_1k(1);
-	set_b_2k(2);
-	set_b_3k(3);
-	set_b_4k(4);
-	set_b_5k(5);
-	set_b_6k(6);
-	set_b_7k(7);
-	set_b_8k(8);
-	set_b_9k(9);
+	set_b_1k(0);
+	set_b_2k(0);
+	set_b_3k(0);
+	set_b_4k(0);
+	set_b_5k(0);
+	set_b_6k(0);
+	set_b_7k(0);
+	set_b_8k(0);
+	set_b_9k(0);
 
 	set_def_ign(def_ign);
 
 	compute_angles();
 
-
+	Ignition_Pin_Init();
 
 	hWin_graph=CreateWindow_graph();
+
 
 	while (1) {
 
@@ -196,9 +197,11 @@ void ignite() {
 	while (stopwatch_getus() < ign_point)
 		;
 	BSP_LED_On(LED3);
+	HAL_GPIO_WritePin(GPIOB,GPIO_PIN_2,GPIO_PIN_SET);
 	while (stopwatch_getus() < ign_point + get_ign_length())
 		;
 	BSP_LED_Off(LED3);
+	HAL_GPIO_WritePin(GPIOB,GPIO_PIN_2,GPIO_PIN_RESET);
 	//BSP_LED_Off(LED4);
 }
 

@@ -15,7 +15,7 @@ Application/SW4STM32/startup_stm32f429xx.o: /home/johannes/workspace/mz_ecu_stmc
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU GCC Assembler'
 	@echo $(PWD)
-	arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -IROJ_DIR$/../Inc -g -o "$@" "$<"
+	arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

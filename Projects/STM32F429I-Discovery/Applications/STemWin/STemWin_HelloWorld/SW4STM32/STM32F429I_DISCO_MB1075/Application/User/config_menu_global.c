@@ -125,7 +125,7 @@ void _cbDialog_config_global(WM_MESSAGE * pMsg) {
 		//
 		hItem = WM_GetDialogItem(pMsg->hWin, ID_SPINBOX_1);
 		SPINBOX_SetFont(hItem, GUI_FONT_8X16);
-		SPINBOX_SetRange(hItem, 20, 35);
+		SPINBOX_SetRange(hItem, 20, 50);
 		SPINBOX_SetValue(hItem, 10 * get_def_ign_mm());
 		//
 		// Initialization of 'Global_Spinbox_Ign_Length'
